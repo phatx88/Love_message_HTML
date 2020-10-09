@@ -57,7 +57,7 @@ $(window).resize(function () {
 					$('div.btn-wrap, #animationWindow').toggleClass('display');
 					$('div.btn-wrap').addClass('animated');
 				}
-			}, 1);
+			}, 75);
 		});
 		
 		return this;
