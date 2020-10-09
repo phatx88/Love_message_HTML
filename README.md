@@ -1,5 +1,5 @@
 # Love_message_HTML
-lời tỏ tình của chàng code đơn thân :)
+lời tỏ tình của chàng coder đơn thân :)
 
 this web page was created based on love tree concept and others source code from the link below
 
