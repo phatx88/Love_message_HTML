@@ -1,20 +1,24 @@
-$(function () {
+$(function(){
 	$(".tricky").on({
-		mouseover: function () {
+		mouseover:function(){
 			$(this).css({
-				left: (Math.random() * 100) + "%",
-				top: (Math.random() * 100) + "%",
+				left:(Math.random()*90)+"%",
+				top:(Math.random()*90)+"%",
 			});
 		}
 	});
+	$(".btn-wrap").hover(function() {
+		   $(this).toggleClass('active');
+	});
 });
 
-$('.tricky').bind('touchstart', function () {
+$('.tricky').bind('touchstart', function(){
 	$(this).css({
-		left: (Math.random() * 100) + "%",
-		top: (Math.random() * 100) + "%"
+		left:(Math.random()*90)+"%",
+		top:(Math.random()*90)+"%"
 	});
 })
+
 
 
 // variables
@@ -53,7 +57,7 @@ $(window).resize(function () {
 					$('div.btn-wrap, #animationWindow').toggleClass('display');
 					$('div.btn-wrap').addClass('animated');
 				}
-			}, 75);
+			}, 1);
 		});
 		
 		return this;
