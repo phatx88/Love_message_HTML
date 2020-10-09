@@ -17,7 +17,8 @@
 	<script type="text/javascript" src="./js/jscex-async-powerpack.min.js"></script>
 	<script type="text/javascript" src="./js/functions.js" charset="utf-8"></script>
 	<script type="text/javascript" src="./js/love.js" charset="utf-8"></script>
-	<script type="text/javascript" src="./js/kk_lrc.js" charset="utf-8"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.1/lottie.min.js" ></script>
+	<script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/35984/ScrubLottieTimeline.min.js"></script>
 
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
 		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
@@ -63,9 +64,8 @@
 				<span class="seperate"></span><br />
 				<span class="strong">PS: Nhấn nút accept làm bạn anh nhé?</span><br />
 				<span class="seperate"></span><br />
-
 			</div>
-
+			<div id="animationWindow" class="display"></div> 
 			<div class="btn-wrap display static"
 				onclick="alert ('Em gửi feedback lại cho anh nhé? Sẵn tiện em thích đi ăn quán nào?');">
 				<a href="https://m.me/phat.x.luong/" class="btn" title="Yes">
@@ -93,6 +93,31 @@
 		function openYT() {
 			window.open("https://www.youtube.com/watch?v=uykPmBGdFfQ&ab_channel=Tr%C3%ADch%C4%90o%E1%BA%A1nH%C3%A0iH%C6%B0%E1%BB%9Bc", "_self");
 		}
+
+		var select = function (s) {
+			return document.querySelector(s);
+		},
+			selectAll = function (s) {
+				return document.querySelectorAll(s);
+			},
+			animationWindow = select('#animationWindow'),
+			anim = lottie.loadAnimation({
+				container: animationWindow,
+				renderer: 'svg',
+				loop: true,
+				autoplay: true,
+				//initialSegment: [0, 1140],
+				path: 'https://assets.codepen.io/35984/heart_eyes_burst.json'
+			});
+
+		anim.addEventListener('DOMLoaded', onDOMLoaded);
+		anim.setSpeed(1);
+
+		function onDOMLoaded(e) {
+
+
+		}
+//ScrubLottieTimeline(anim)
 	</script>
 
 	<script>
